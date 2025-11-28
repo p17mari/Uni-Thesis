@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TeacherMAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+         
+    xmlns:local="clr-namespace:TeacherMAUI"
+
+    Shell.FlyoutBehavior="Disabled"
+    Title="TeacherMAUI">
+    
+    <TabBar>
+        <Tab Title="Ηome" Icon="test.png">
+            <ShellContent ContentTemplate="{DataTemplate local:TestPage}"/>
+        </Tab>
+        <Tab Title="Chaperone" Icon="chaperone.png">
+            <ShellContent ContentTemplate="{DataTemplate local:AdditionEfhmeriaPage}"/>
+        </Tab>
+        <Tab Title="Lesson" Icon="lesson.png">
+            <ShellContent ContentTemplate="{DataTemplate local:AdditionExeiPage}"/>
+        </Tab>
+
+    </TabBar>
+</Shell>

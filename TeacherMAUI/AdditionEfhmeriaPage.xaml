@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeacherMAUI.AdditionEfhmeriaPage"
+             Title="Add Chaperone">
+
+    <ScrollView x:Name="formScrollView">
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label
+            Text="Chaperoning Form!"
+            Style="{StaticResource Headline}"/>
+
+
+            <Label Text="Enter where you are chaperoning"/>
+            <Entry x:Name="locationEntry" />
+
+            <Label Text="Enter which Day you are teaching"/>
+            <Picker x:Name="dayEntry">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Sunday</x:String>
+                        <x:String>Monday</x:String>
+                        <x:String>Tuesday</x:String>
+                        <x:String>Wednesday</x:String>
+                        <x:String>Thursday</x:String>
+                        <x:String>Friday</x:String>
+                        <x:String>Saturday</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Enter when the Chaperoning Starts" />
+            <TimePicker x:Name="startchaperonEntry" />
+
+            <Label Text="Enter when the Chaperoning Ends" />
+            <TimePicker x:Name="endchaperonEntry"/>
+
+            <Button
+             x:Name="AddChaperBtn"
+             Text="Add Chaperone" 
+             Clicked="OnChaperonClicked"
+            HorizontalOptions="Fill" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
